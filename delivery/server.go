@@ -37,7 +37,7 @@ func NewServer() *Server {
 	useCaseManager := manager.NewUsecaseManager(repoManager)
 
 	engine := gin.Default()
-	host := fmt.Sprintf("%s:%s", cfg.Host, cfg.Port)
+	host := fmt.Sprintf("%s:%s", cfg.ApiHost, cfg.ApiPort)
 	return &Server{
 		useCaseManager: useCaseManager,
 		engine:         engine,
